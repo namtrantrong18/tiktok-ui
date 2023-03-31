@@ -56,6 +56,15 @@
 }
 
 .outline {
+    color: rgba(22, 24, 35, 1);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, .03);;
+    }
+}
+
+.outlinePrimary {
     color: var(--primary);
     border-color: currentColor;
 
