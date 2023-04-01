@@ -80,6 +80,9 @@
 }
 
 .search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--search-button-width);
     height: 100%;
     border-top-right-radius: var(--search-border-radius);
@@ -103,6 +106,7 @@
     align-items: center;
 }
 
+
 .more-btn {
     font-size: 2rem;
     margin-left: 28px;
@@ -112,10 +116,11 @@
 }
 
 .actions-btn {
+    display: flex;
     background-color: transparent;
     font-size: 2.2rem;
     color: rgba(22, 24, 35, 1);
-    padding: 4px 12px;
+    padding: 4px 10px;
     cursor: pointer;
 }
 
