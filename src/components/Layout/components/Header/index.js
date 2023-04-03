@@ -1,10 +1,12 @@
 import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
+import routesConfig from '~/config/routes';
 import styles from './Header.module.scss';
 import image from '~/assets/images';
 import Button from '~/components/Button';
@@ -93,7 +95,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={image.logo} alt="TikTok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}><img src={image.logo} alt="TikTok" /></Link>
 
                 <Search />
 
