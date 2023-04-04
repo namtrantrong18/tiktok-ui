@@ -120,7 +120,7 @@ function Header() {
                         </Fragment>
                     ) : (
                         <Fragment>
-                            <Button primary>Login</Button>
+                            <Button primary >Login</Button>
                         </Fragment>
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
