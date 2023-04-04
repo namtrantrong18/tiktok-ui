@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 function MenuItem({ data, onClick }) {
     const classes = cx('menu-item', {
-        separate : data.separate
+        separate: data.separate,
     });
 
     return (
@@ -18,8 +18,8 @@ function MenuItem({ data, onClick }) {
 }
 
 MenuItem.propTypes = {
-    data : PropTypes.object.isRequired,
-    onClick : PropTypes.func,
-}
+    data: PropTypes.object.isRequired,
+    onClick: PropTypes.func,
+};
 
 export default MenuItem;
