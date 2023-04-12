@@ -5,6 +5,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '~/components/Button';
 import styles from './AccountPreview.module.scss';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -12,9 +13,9 @@ function AccountPreview() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
-                <img
+                <Image
                     className={cx('avatar')}
-                    src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1680879600&x-signature=Y7ejZZderZXKqaTgzTKbRztiHZU%3D"
+                    src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1681228800&x-signature=66mVWujzV18LAqthIdHk7TjSAlI%3D"
                     alt=""
                 />
                 <Button primary className={cx('follow-btn')}>Follow</Button>

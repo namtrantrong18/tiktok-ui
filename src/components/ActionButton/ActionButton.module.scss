@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 8px 0 6px;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: rgba(22, 24, 35, .06);
+}
+
+.data-count {
+    color: rgba(22, 24, 35, .75);
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+}

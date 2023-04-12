@@ -1,0 +1,177 @@
+.wrapper {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: solid 0.5px #16182333;
+}
+
+.avatar {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+}
+
+.container {
+    margin-left: 12px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 624px;
+}
+
+.intro {
+    max-width: 510px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.nickname {
+    font-family: SofiaPro,sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    padding: 4px;
+    color: var(--text-color);
+
+}
+
+.fullname {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+}
+
+.description {
+    color: var(--text-color);
+}
+
+.caption {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 22px;
+    word-break: break-word;
+}
+
+.hashtag {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 22px;
+    word-break: break-word;
+
+    a {
+        margin-right: 4px;
+    }
+
+    & a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.location {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.location-icon {
+    font-size: 1.6rem;
+}
+
+.location-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.music {
+    display: flex;
+    align-items: center;
+    margin: 4px 0 12px;
+    font-size: 16px;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.music-icon {
+    margin-right: 6px;
+}
+
+.music-name {
+    font-weight: 600;
+    line-height: 2.2rem;
+}
+
+.follow-btn {
+    margin-top: 8px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-end;
+}
+
+.video {
+    position: relative;
+    display: flex;
+
+    & :hover ~ .controls,
+    & :hover ~ .volume {
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+
+}
+
+.controls {
+    opacity: 0;
+    position: absolute;
+    left: 12px;
+    bottom: 26px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    color: var(--white);
+    transition: opacity 0.2s ease-in;
+
+    & .icon {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+    } 
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.volume {
+    opacity: 0;
+    position: absolute;
+    right: 12px;
+    bottom: 26px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    color: var(--white);
+    transition: opacity 0.2s ease-in;
+}
+
+.action {
+    margin-left: 20px;
+}
