@@ -6,19 +6,19 @@ import { useRef, useState } from 'react';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { AccountPreview } from '~/components/SuggestedAccounts/AccountPreview';
-import Button from '~/components/Button';
 import { LocationIcon, VolumeIcon } from '~/components/Icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMusic, faPlay, faPause, faHeart, faCommentDots, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faMusic, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import Button from '~/components/Button';
 import Video from '~/components/Video';
-import ActionButton from '~/components/ActionButton';
+import Image from '~/components/Image';
+import Action from '~/components/Action';
 
 const cx = classNames.bind(styles);
 
 function PostItem({ data }) {
     const [playing, setPlaying] = useState(false);
     const videoRef = useRef();
-    console.log(data)
 
     const renderPreview = (props) => {
         return (
@@ -40,16 +40,12 @@ function PostItem({ data }) {
         }
     };
 
-    // const handleLikeVideo = () => {
-
-    // }
-
     return (
         <div className={cx('wrapper')}>
             <div>
                 <Tippy interactive delay={[1000, 200]} offset={[115, 0]} placement="bottom" render={renderPreview}>
                     <Link to="/@iamdiu">
-                        <img className={cx('avatar')} src={data.avatar} alt="avatar" />
+                        <Image className={cx('avatar')} src={data.avatar} alt="avatar" />
                     </Link>
                 </Tippy>
             </div>
@@ -75,7 +71,9 @@ function PostItem({ data }) {
                             <br />
                             <strong className={cx('hashtag')}>
                                 {data.hashtags.map((hashtag, index) => (
-                                    <a href='/' key={index}>{hashtag}</a>
+                                    <a href="/" key={index}>
+                                        {hashtag}
+                                    </a>
                                 ))}
                             </strong>
                         </div>
@@ -105,15 +103,7 @@ function PostItem({ data }) {
                         </div>
                     </div>
                     <div className={cx('action')}>
-                        <ActionButton>
-                            <FontAwesomeIcon icon={faHeart} />
-                        </ActionButton>
-                        <ActionButton>
-                            <FontAwesomeIcon icon={faCommentDots} />
-                        </ActionButton>
-                        <ActionButton>
-                            <FontAwesomeIcon icon={faShare} />
-                        </ActionButton>
+                        <Action />
                     </div>
                 </div>
             </div>
